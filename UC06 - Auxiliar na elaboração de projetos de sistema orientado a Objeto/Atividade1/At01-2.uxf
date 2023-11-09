@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>224</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Hospedagem
+--
+- idHospedagem: Int
+- dias: Int
+- valorDiaria: Float
+--
++ CalcularValor(): Float
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>224</y>
+      <w>136</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Abstract Deslocamento
+--
+- IdDeslocamento:Int
+- Descricao:String
+- Destino: String
+--
++ abstract CalcularValor():Float
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>344</x>
+      <y>80</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Onibus 
+extends Deslocamento
+--
+- ValorPassagem:Int
+--
++ gets e sets()
++ implements:
+CalcularValor()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>168</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>176</y>
+      <w>80</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>496</x>
+      <y>80</y>
+      <w>144</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Carro
+extends Deslocamento
+--
+- KmRodados:Float
+- ValorGasolina
+--
++ gets e sets()
++ Implements: 
+Calcular Valor()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>80</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>RodoSenac
+extends Deslocamento
+--
+--
++ Implements: 
+Calcular Valor()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>168</y>
+      <w>56</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>50.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>184</x>
+      <y>392</y>
+      <w>216</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Viagem
+--
+- idViagem: Integer
+- funcionario: Funcionario
+- hospedagens: List[Hospedagem]
+- Deslocamento: List[Deslocamento]
+--
++ CalcularTotal();
++ Pagar();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>232</x>
+      <y>312</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>344</x>
+      <y>312</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
